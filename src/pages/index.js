@@ -1,9 +1,35 @@
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
+import '../styles/tachyons.min.css';
 import '../styles/index.css';
+import '../styles/headnfoot.css';
+import '../styles/buttons.css';
+import '../styles/mobile.css';
+import Pattern from "../images/pattern2x.png"
+import Plugin from "../images/bigplugin.png"
+import Canvas from "../images/bigcanvas.png"
+import Gradient from "../images/gradient.png"
+// import Video from "../images/video.mp4"
 
 function Index() {
   const [date, setDate] = useState(null);
+  const getNow = (e) => {
+    e.preventDefault();
+    console.log("CLICKED");
+     document.location.href = "https://gum.co/kmTUVI";
+  }
+
+  const getTweet = (e) => {
+    e.preventDefault();
+    console.log("CLICKED");
+     document.location.href = "https://gum.co/kmTUVI";
+  }
+
+  const getContact = (e) => {
+    e.preventDefault();
+    console.log("CLICKED");
+     document.location.href = "https://gum.co/kmTUVI";
+  }
+
   useEffect(() => {
     async function getDate() {
       const res = await fetch('/api/date');
@@ -14,41 +40,59 @@ function Index() {
   }, []);
   return (
     <main>
-      <Helmet>
-        <title>Gatsby + Node.js (TypeScript) API</title>
-      </Helmet>
-      <h1>Gatsby + Node.js (TypeScript) API</h1>
-      <h2>
-        Deployed with{' '}
-        <a
-          href="https://vercel.com/docs"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Vercel
-        </a>
-        !
-      </h2>
-      <p>
-        <a
-          href="https://github.com/zeit/now-examples/blob/master/gatsby-functions"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          This project
-        </a>{' '}
-        is a <a href="https://www.gatsbyjs.org/">Gatsby</a> app with two
-        directories, <code>/src</code> for static content and <code>/api</code>{' '}
-        which contains a serverless{' '}
-        <a href="https://nodejs.org/en/">Node.js (TypeScript)</a> function. See{' '}
-        <a href="/api/date">
-          <code>api/date</code> for the Date API with Node.js (TypeScript)
-        </a>
-        .
-      </p>
-      <br />
-      <h2>The date according to Node.js (TypeScript) is:</h2>
-      <p>{date ? date : 'Loading date...'}</p>
+
+      <header>
+        <div>
+          <h3>Easy Units</h3>
+        </div>
+        <div className="header__buttons">
+
+          <a href="https://twitter.com/intent/tweet?text=This%20Figma%20plugin%20helps%20you%20to%20modify%20Figma%20objects%20in%20units%20such%20as%20inches%20and%20centimeters%20👾%20👉http%3A%2F%2Ftinytools.com">
+            <button className="button__twitter">Share</button>
+          </a>
+
+          <a href="mailto:hello@tinyfactories.space">
+            <button className="button__contact">Contact us</button>
+          </a>
+
+        </div>
+      </header>
+
+      <div className="hero">
+        <div className="hero__text">
+          <h1>Modify Figma objects in other units</h1>
+          <p>Now supporting rem, inches, centimeters, millimeters</p>
+          <div className="hero__buttons">
+              <button onClick={getNow} className="button__cta">
+              <span>Get it now</span>
+              </button>
+
+            <a href="">
+              <button className="button__demo">
+              Watch demo
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div className="hero__banner">
+          <div className="hero__banner__gradient">
+            <img src={Canvas} alt="pattern" className="hero__banner__canvas"/>
+            <img src={Plugin} alt="pattern" className="hero__banner__plugin"/>
+          </div>
+        </div>
+      </div>
+
+      <div className="patterns">
+        <img src={Pattern} alt="pattern" className="patterns p0"/>
+        <img src={Pattern} alt="pattern" className="patterns p1"/>
+        <img src={Pattern} alt="pattern" className="patterns p2"/>
+      </div>
+
+      <footer >
+        <span>This is a tiny tool, created by friends at  <a href="http://tinyfactories.space" className="link no-underline"> Tiny Factories</a></span>
+      </footer>
+
     </main>
   );
 }
