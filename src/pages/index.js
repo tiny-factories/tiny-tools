@@ -7,7 +7,6 @@ import '../styles/mobile.css';
 import Pattern from "../images/pattern2x.png"
 import Plugin from "../images/bigplugin.png"
 import Canvas from "../images/bigcanvas.png"
-import Gradient from "../images/gradient.png"
 // import Video from "../images/video.mp4"
 
 function Index() {
