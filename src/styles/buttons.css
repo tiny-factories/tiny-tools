@@ -29,7 +29,7 @@ button::before {
 }
 
 .button__twitter:hover{
-  transform: translate(0,-4%);
+  transform: translate(0,-4px);
   box-shadow: 0px 12px 15px rgba(37, 104, 159, 0.16);
 }
 
@@ -48,7 +48,7 @@ button::before {
 }
 
 .button__contact:hover{
-  transform: translate(0,-4%);
+  transform: translate(0,-4px);
   box-shadow: 0px 12px 25px rgba(83, 197, 197, 0.17);
 }
 
@@ -65,18 +65,18 @@ button::before {
 }
 
 .button__primary:hover{
-  transform: translate(0,-4%);
-  box-shadow: 0px 12px 35px rgba(163, 209, 232, 0.68);
+  transform: translate(0,-4px);
+  /* box-shadow: 0px 12px 35px rgba(163, 209, 232, 0.68); */
 }
 
 .button__secondary{
   color: #7B839A;
   background-color: #EFF6F6;
-  border: 2px solid #7B839A;
+  /* border: 2px solid #7B839A; */
   border-radius: 7.91784px;
   margin: 0 1rem 0 0;
 }
 .button__secondary:hover{
-  transform: translate(0,-4%);
-  box-shadow: 0px 12px 15px rgba(145, 215, 215, 0.3);
+  transform: translate(0, -4px);
+  /* box-shadow: 0px 12px 15px rgba(145, 215, 215, 0.3); */
 }
