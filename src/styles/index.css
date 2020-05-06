@@ -1,59 +1,68 @@
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
+/* @import url('https://rsms.me/inter/inter.css'); */
+/* html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', sans-serif; }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url("../fonts/FoundersGrotesk-Regular.otf");
+  font-weight: normal;
 }
-html{
-  font-family: 'Inter', sans-serif;
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url("../fonts/FoundersGrotesk-Medium.otf");
+  font-weight: 500;
+}
+
+
+
+html {
+  font-family: 'Manrope', sans-serif;
+  font-weight: normal;
 }
 
 
 body {
-  background-color: #EFF6F6;
+  background-color: #F6FEFF;
 }
 
 h1{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 3rem;
-  line-height: 56px;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.2rem;
   /* or 126% */
-
+  margin: 0 0 1rem 0;
   display: flex;
   align-items: center;
   letter-spacing: 0.005em;
-
   color: #000000;
 }
 
 p{
-  font-family: 'Inter';
+  font-family: 'Manrope';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
+  color: #7B839A;
   font-size: 1rem;
-  line-height: 23px;
+  line-height: 1.2rem;
   /* or 127% */
 
-  margin: -2% 0 5% 0;
+  margin: 0 0 2rem 0;
   display: flex;
   align-items: center;
   letter-spacing: 0.005em;
-
-  color: #000000;
 }
 
 .hero {
-  /* height: 100vh;
-  width: 100%;
-  padding-left: 10vw; */
-
-  left: 10vw;
-  top: 10vh;
+  margin: 12rem 8rem 0 8rem;
 }
 
 .hero__text {
-  width: 40vw;
+  width: 60vw;
   height: 20%;
 
   display: flex;
@@ -61,7 +70,7 @@ p{
   justify-content: space-between;
   text-align: left;
 
-  padding: 8rem 0 0 12rem;
+  /* padding: 8rem 0 0 12rem; */
 }
 
 .hero__buttons {
@@ -79,35 +88,33 @@ p{
 }
 
 .hero__banner {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .hero__banner__gradient {
-  background: rgb(119,124,149);
-  background: linear-gradient(84deg, rgba(119,124,149,1) 0%, rgba(198,255,245,1) 100%);
+  /* background: rgb(119,124,149); */
+  background: linear-gradient(80deg, rgb(210, 230, 248) 0%, rgba(213,243,246,1) 100%);
   border-radius: 10px;
 
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 
-  height: 40vh;
-  margin-top: 5rem;
-  padding: 3rem 0;
+  height: 24rem;
+  margin: 5rem 0;
+  width: 100%;
+  padding: 2rem 0;
 }
 
-.hero__banner__canvas {
-  max-width: 50%;
-  height: 100%;
-}
+
 
 .hero__banner__plugin {
-  transform: translate(0, -12rem);
+  /* transform: translate(0, -12rem); */
   max-width:100%;
 
   display: block;
-  height: 70%;
+  /* height: 70%; */
 }
 
 .patterns {
@@ -124,9 +131,12 @@ p{
   position:absolute;
   top: 60vh;
   left: 5vw;
+  z-index: 1000;
+  opacity: 0.5;
 }
 .p2 {
   position:absolute;
   top: 72vh;
   left: 85vw;
+  z-index: 1000;
 }

@@ -2,13 +2,20 @@
 /*Buttons*/
 
 button {
+  font-weight: 700;
   text-align: center;
-  padding:18px 24px;
+  padding:16px 24px;
   transition: all 0.2s;
   max-width: 20vh;
-
   white-space: nowrap;
   text-align: center;
+  border: 0px;
+}
+button:hover {
+  cursor: pointer;
+}
+button::before {
+  vertical-align: baseline;
 }
 
 .button__twitter{
@@ -49,49 +56,27 @@ button {
 
 }
 
-.button__cta{
-  margin-right: 2rem;
-  appearance:none;
-  font-weight: 600;
-  font-size: 19.3547px;
-  line-height: 25px;
-
-  text-align: center;
-  letter-spacing: 0.005em;
-
+.button__primary {
+  margin-right: 1rem;
   color: #FBFDFF;
   background: linear-gradient(95.57deg, #1B4EFD -79.59%, #BBE9E3 125.82%);
   /* box-shadow: 0px 0px 22.8738px rgba(0, 0, 0, 0.02); */
   border-radius: 8px;
-  border: none;
 }
 
-.button__cta:hover{
+.button__primary:hover{
   transform: translate(0,-4%);
   box-shadow: 0px 12px 35px rgba(163, 209, 232, 0.68);
 }
 
-.button__cta:visited{
-
-}
-
-.button__demo{
-  appearance:none;
-  font-weight: 600;
-  font-size: 19.3547px;
-  line-height: 25px;
-
+.button__secondary{
   color: #7B839A;
   background-color: #EFF6F6;
   border: 2px solid #7B839A;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 22.8738px rgba(0, 0, 0, 0.02);
   border-radius: 7.91784px;
+  margin: 0 1rem 0 0;
 }
-.button__demo:hover{
+.button__secondary:hover{
   transform: translate(0,-4%);
   box-shadow: 0px 12px 15px rgba(145, 215, 215, 0.3);
-}
-.button__demo:visited{
-
 }

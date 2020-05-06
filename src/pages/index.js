@@ -39,7 +39,6 @@ function Index() {
   }, []);
   return (
     <main>
-
       <header>
         <div>
           <h3>Easy Units</h3>
@@ -47,11 +46,11 @@ function Index() {
         <div className="header__buttons">
 
           <a href="https://twitter.com/intent/tweet?text=This%20Figma%20plugin%20helps%20you%20to%20modify%20Figma%20objects%20in%20units%20such%20as%20inches%20and%20centimeters%20👾%20👉http%3A%2F%2Ftinytools.com">
-            <button className="button__twitter">Share</button>
+            <button className="button__secondary">Share</button>
           </a>
 
           <a href="mailto:hello@tinyfactories.space">
-            <button className="button__contact">Contact us</button>
+            <button className="button__secondary">Contact us</button>
           </a>
 
         </div>
@@ -59,15 +58,15 @@ function Index() {
 
       <div className="hero">
         <div className="hero__text">
-          <h1>Modify Figma objects in other units</h1>
-          <p>Now supporting rem, inches, centimeters, millimeters</p>
+          <h1>A unit converter for Figma</h1>
+          <p>Convert your shapes from pixels to inches, rem, cm, and ft.</p>
           <div className="hero__buttons">
-              <button onClick={getNow} className="button__cta">
+              <button onClick={getNow} className="button__primary">
               <span>Get it now</span>
               </button>
 
             <a href="">
-              <button className="button__demo">
+              <button className="button__secondary">
               Watch demo
               </button>
             </a>
