@@ -71,6 +71,10 @@ function Index() {
               <button onClick={getNow} className="button__primary">
               <div>Get it now for $4</div>
               </button>
+
+              <a href="https://www.figma.com/community/plugin/835063877729335093/Easy-Units">
+            <button className="button__secondary">View plugin page</button>
+          </a>
           </div>
         </div>
 
