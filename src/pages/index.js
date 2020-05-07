@@ -8,14 +8,19 @@ import Pattern from "../images/pattern2x.png"
 import Plugin from "../images/bigplugin.png"
 import Canvas from "../images/bigcanvas.png"
 import Logo from "../images/logo.png"
-// import Video from "../images/video.mp4"
+
 
 function Index() {
+  
   const [date, setDate] = useState(null);
   const getNow = (e) => {
     e.preventDefault();
     console.log("CLICKED");
      document.location.href = "https://gum.co/kmTUVI";
+  }
+
+  const openModal = () => {
+    this.setState({isOpen: true})
   }
 
   const getTweet = (e) => {
@@ -38,6 +43,7 @@ function Index() {
     }
     getDate();
   }, []);
+  
   return (
     <main>
       <header>
@@ -63,14 +69,8 @@ function Index() {
           <p>Convert your shapes from pixels to inches, rem, cm, and ft.</p>
           <div className="hero__buttons">
               <button onClick={getNow} className="button__primary">
-              <span>Get it now</span>
+              <div>Get it now for $4</div>
               </button>
-
-            <a href="">
-              <button className="button__secondary">
-              Watch demo     
-              </button>
-            </a>
           </div>
         </div>
 
