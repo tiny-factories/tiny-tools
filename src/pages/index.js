@@ -11,12 +11,12 @@ import Logo from "../images/logo.png"
 
 
 function Index() {
-  
+
   const [date, setDate] = useState(null);
   const getNow = (e) => {
     e.preventDefault();
     console.log("CLICKED");
-     document.location.href = "https://gum.co/kmTUVI";
+     document.location.href = "https://gumroad.com/l/kmTUVI";
   }
 
   const openModal = () => {
@@ -43,7 +43,7 @@ function Index() {
     }
     getDate();
   }, []);
-  
+
   return (
     <main>
       <header>
