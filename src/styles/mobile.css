@@ -6,17 +6,20 @@
     margin-top: 8vh;
     margin-bottom: 10vh;
   }
+  .hero__banner__gradient {
+    height: 28rem;
+  }
   .hero__banner__canvas {
     position: absolute;
     max-width: 100%;
-    height: 50%;
-    left: 20%;
+    height: 22rem;
+    left: 22%;
   }
   .hero__banner__plugin {
     position: absolute;
     max-width:100%;
-    height: 50%;
-    right: 20%;
+    height: 22rem;
+    right: 22%;
   }
 
 }
@@ -50,7 +53,7 @@
   .hero__banner__canvas {
     position: absolute;
     max-width: 100%;
-    height: 50%;
+    height: 24rem;
     left: 10%;
 
   }
@@ -58,38 +61,42 @@
   .hero__banner__plugin {
     position: absolute;
     max-width:100%;
-    height: 50%;
+    height: 24rem;
     right: 5%;
   }
 }
 
+@media only screen and (max-width:768px)  {
+  .hero__banner__canvas {
+    position: absolute;
+    max-width: 100%;
+    height: 18rem;
+    left: 10%;
+
+  }
+
+  .hero__banner__plugin {
+    position: absolute;
+    max-width:100%;
+    height: 18rem;
+    right: 5%;
+  }
+}
+
+
   /* smartphones, iPhone, portrait 480x320 phones */
 @media only screen and (max-width:620px)  {
-  h1 {
-    font-size: 2.8rem;
-    line-height: 3rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-  }
-
+ 
   .hero__text {
-    width: 90vw;
-    height: 20%;
+    margin: 0;
     margin-bottom: 3rem;
   }
 
   .hero__banner {
     width: 100%;
-    /* margin: 0 auto; */
-
     position: absolute;
-    height: 50vh;
     left: 0;
     margin-top: 2rem;
-    /* bottom: 5rem; */
   }
 
   .hero__banner__gradient {
@@ -103,58 +110,17 @@
   }
 
   .hero__banner__canvas {
-    max-width: 80%;
-    height: 100%;
-    display: block;
-
-    margin: 0 auto;
-    z-index: 2;
-    visibility: hidden;
     display: none;
   }
 
   .hero__banner__plugin {
-    transform: translate(0, -3rem);
-    max-width:80%;
-
-    display: block;
-    height: 90%;
-
-    margin: 0 auto;
+    position: absolute;
+    max-width:100%;
+    height: 18rem;
+    top:2rem;
   }
 
-  .p0 {
-    position:absolute;
-    top: 36vh;
-    left: 10vw;
-  }
-  .p1 {
-    position:absolute;
-    top: 60vh;
-    left: 5vw;
-  }
   .p2 {
-    position:absolute;
-    top: 82vh;
-    left: 77vw;
-    /* z-index: 1; */
-  }
-
-  footer{
-    /* position: absolute; */
-    left: 0;
-    bottom: 0;
-  }
-
-  footer span{
-    color: #ffffff;
-  }
-
-  footer a{
-    color: #fffffff
-  }
-
-  footer a:hover{
-    color: #fffffff
+    display: none;
   }
 }
