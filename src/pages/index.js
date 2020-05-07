@@ -7,14 +7,20 @@ import '../styles/mobile.css';
 import Pattern from "../images/pattern2x.png"
 import Plugin from "../images/bigplugin.png"
 import Canvas from "../images/bigcanvas.png"
-// import Video from "../images/video.mp4"
+import Logo from "../images/logo.png"
+
 
 function Index() {
+  
   const [date, setDate] = useState(null);
   const getNow = (e) => {
     e.preventDefault();
     console.log("CLICKED");
      document.location.href = "https://gum.co/kmTUVI";
+  }
+
+  const openModal = () => {
+    this.setState({isOpen: true})
   }
 
   const getTweet = (e) => {
@@ -37,21 +43,21 @@ function Index() {
     }
     getDate();
   }, []);
+  
   return (
     <main>
-
       <header>
-        <div>
-          <h3>Easy Units</h3>
+        <div className="flex__container">
+        <img id="logo" src={Logo} /> <h3>Easy Units</h3>
         </div>
         <div className="header__buttons">
 
           <a href="https://twitter.com/intent/tweet?text=This%20Figma%20plugin%20helps%20you%20to%20modify%20Figma%20objects%20in%20units%20such%20as%20inches%20and%20centimeters%20👾%20👉http%3A%2F%2Ftinytools.com">
-            <button className="button__twitter">Share</button>
+            <button className="button__primary">Tweet this</button>
           </a>
 
           <a href="mailto:hello@tinyfactories.space">
-            <button className="button__contact">Contact us</button>
+            <button className="button__secondary">Contact us</button>
           </a>
 
         </div>
@@ -59,18 +65,12 @@ function Index() {
 
       <div className="hero">
         <div className="hero__text">
-          <h1>Modify Figma objects in other units</h1>
-          <p>Now supporting rem, inches, centimeters, millimeters</p>
+          <h1>The only unit converter for Figma</h1>
+          <p>Convert your shapes from pixels to inches, rem, cm, and ft.</p>
           <div className="hero__buttons">
-              <button onClick={getNow} className="button__cta">
-              <span>Get it now</span>
+              <button onClick={getNow} className="button__primary">
+              <div>Get it now for $4</div>
               </button>
-
-            <a href="">
-              <button className="button__demo">
-              Watch demo
-              </button>
-            </a>
           </div>
         </div>
 
